@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -93,17 +94,24 @@ namespace ilk_winform
             //    button1.Enabled = true;
             //} 
             #endregion
-            //label2.Text = comboBox1.SelectedItem.ToString();
+            #region ComboBox Verilerinden biri seçildiğinde seçilen değeri stringe çevirip labela atan komut
+            /* 
+     label2.Text = comboBox1.SelectedItem.ToString();
+     */
+            #endregion
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            #region Tarih Seçtikten Sonra Yıl Ekleme/Çıkarma, Seçilen Tarihi Gösterme Kodu 
+            //MessageBox.Show($" {dateTimePicker1.Value.ToShortDateString()}");
+            //label1.Text = dateTimePicker1.Value.AddYears(2).ToShortDateString();
+            //label2.Text = dateTimePicker1.Value.AddYears(-2).ToShortDateString(); 
+            #endregion
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            //MessageBox.Show($"{comboBox1.SelectedItem.ToString()} seçildi");
-        }
-
-        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
-        {
-            //label1.Text = comboBox1.SelectedItem.ToString();
         }
     }
 }

@@ -54,5 +54,28 @@ namespace ilk_winform
 
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            #region Butonun Seçilip Seçilmediğini Kontrol Etme
+            //if (radioButton1.Checked == true)
+            //{
+            //    MessageBox.Show("Radio butonu seçilmiş");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Radio butonu seçilmemiş");
+            //} 
+            #endregion
+
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            #region Butonun Değeri Değiştirildiğinde çıkacak Mesaj
+            //MessageBox.Show("Radio butonu değiştirildi"); 
+            #endregion
+        }
     }
 }

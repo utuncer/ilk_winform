@@ -47,6 +47,12 @@ namespace ilk_winform
             //firstlabel.BackColor = Color.IndianRed;
             //firstlabel.ForeColor = Color.White;
             #endregion
+
+            #region Textbox'a Yazılan Metni Label'a Yansıtan Kod
+            //firstlabel.Text = textBox1.Text; 
+            #endregion
+
+
         }
     }
 }

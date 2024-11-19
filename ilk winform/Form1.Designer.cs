@@ -30,6 +30,7 @@
         {
             this.firstlabel = new System.Windows.Forms.Label();
             this.firstbutton = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // firstlabel
@@ -43,7 +44,7 @@
             // 
             // firstbutton
             // 
-            this.firstbutton.Location = new System.Drawing.Point(251, 89);
+            this.firstbutton.Location = new System.Drawing.Point(298, 162);
             this.firstbutton.Name = "firstbutton";
             this.firstbutton.Size = new System.Drawing.Size(75, 23);
             this.firstbutton.TabIndex = 1;
@@ -51,9 +52,19 @@
             this.firstbutton.UseVisualStyleBackColor = true;
             this.firstbutton.Click += new System.EventHandler(this.firstbutton_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(457, 57);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(352, 113);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.Text = "ilk görünen yazı";
+            // 
             // mainform
             // 
             this.ClientSize = new System.Drawing.Size(1093, 416);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.firstbutton);
             this.Controls.Add(this.firstlabel);
             this.Name = "mainform";
@@ -68,6 +79,7 @@
 
         private System.Windows.Forms.Label firstlabel;
         private System.Windows.Forms.Button firstbutton;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

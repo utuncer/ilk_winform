@@ -19,7 +19,12 @@ namespace ilk_winform
 
         private void mainform_Load(object sender, EventArgs e)
         {
-            // MessageBox.Show("Form Yüklendi");
+            //// MessageBox.Show("Form Yüklendi");
+            //comboBox1.Items.Add("İstanbul");
+            //comboBox1.Items.Add("Bursa");
+            //comboBox1.Items.Add("Ankara");
+            ////comboBox1.SelectedIndex = 2;
+            //button1.Enabled = false;
         }
 
         private void mainform_Click(object sender, EventArgs e)
@@ -37,7 +42,6 @@ namespace ilk_winform
 
             //} 
             #endregion
-
         }
 
         private void firstbutton_Click(object sender, EventArgs e)
@@ -51,7 +55,6 @@ namespace ilk_winform
             #region Textbox'a Yazılan Metni Label'a Yansıtan Kod
             //firstlabel.Text = textBox1.Text; 
             #endregion
-
 
         }
 
@@ -76,6 +79,31 @@ namespace ilk_winform
             #region Butonun Değeri Değiştirildiğinde çıkacak Mesaj
             //MessageBox.Show("Radio butonu değiştirildi"); 
             #endregion
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            #region ComboBox'tan Verilerden Birinin Seçili Seçilmediğine Göre Buton Aktifliğini Değiştiren Komut
+            //if (comboBox1.SelectedIndex == -1)
+            //{
+            //    button1.Enabled = false;
+            //}
+            //else
+            //{
+            //    button1.Enabled = true;
+            //} 
+            #endregion
+            //label2.Text = comboBox1.SelectedItem.ToString();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            //MessageBox.Show($"{comboBox1.SelectedItem.ToString()} seçildi");
+        }
+
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            //label1.Text = comboBox1.SelectedItem.ToString();
         }
     }
 }

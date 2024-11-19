@@ -22,11 +22,6 @@ namespace ilk_winform
             //MessageBox.Show("Form Açılıyor");
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void mainform_MouseClick(object sender, MouseEventArgs e)
         {
 
@@ -45,5 +40,11 @@ namespace ilk_winform
             #endregion
 
         }
+
+        private void firstbutton_Click(object sender, EventArgs e)
+        {
+            firstbutton.Text = "Deneme";
+        }
+
     }
 }

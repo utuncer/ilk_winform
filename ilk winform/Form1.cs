@@ -44,7 +44,6 @@ namespace ilk_winform
             //} 
             #endregion
         }
-
         private void firstbutton_Click(object sender, EventArgs e)
         {
             #region Butona Tıkladığında Yazıyı (Label'ı) Düzenleyen Komut
@@ -56,9 +55,7 @@ namespace ilk_winform
             #region Textbox'a Yazılan Metni Label'a Yansıtan Kod
             //firstlabel.Text = textBox1.Text; 
             #endregion
-
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             #region Butonun Seçilip Seçilmediğini Kontrol Etme
@@ -71,20 +68,16 @@ namespace ilk_winform
             //    MessageBox.Show("Radio butonu seçilmemiş");
             //} 
             #endregion
-
-
         }
-
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             #region Butonun Değeri Değiştirildiğinde çıkacak Mesaj
             //MessageBox.Show("Radio butonu değiştirildi"); 
             #endregion
         }
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            #region ComboBox'tan Verilerden Birinin Seçili Seçilmediğine Göre Buton Aktifliğini Değiştiren Komut
+         #region ComboBox'tan Verilerden Birinin Seçili Seçilmediğine Göre Buton Aktifliğini Değiştiren Komut
             //if (comboBox1.SelectedIndex == -1)
             //{
             //    button1.Enabled = false;
@@ -109,9 +102,18 @@ namespace ilk_winform
             //label2.Text = dateTimePicker1.Value.AddYears(-2).ToShortDateString(); 
             #endregion
         }
-
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click_2(object sender, EventArgs e)
         {
+            #region Tıklandığında Diğer Formada Ulaşan Basit Bir Kod
+            //string ad = adBox.Text;
+            //string soyad = soyadBox.Text;
+            //string adsoyad = ad + " " + soyad;
+            //Form2 form2goster = new Form2();
+            //form2goster.label1.Text = adsoyad;
+            //// açtığında önceki açılan formda etkileşime izin verir
+            //// form2goster.Show();
+            //form2goster.ShowDialog(); 
+            #endregion
         }
     }
 }

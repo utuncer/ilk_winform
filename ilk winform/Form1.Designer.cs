@@ -30,184 +30,95 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainform));
-            this.labelFrom = new System.Windows.Forms.Label();
-            this.labelTo = new System.Windows.Forms.Label();
-            this.txtFrom = new System.Windows.Forms.TextBox();
-            this.txtTo = new System.Windows.Forms.TextBox();
-            this.buttonCount = new System.Windows.Forms.Button();
-            this.buttonExit = new System.Windows.Forms.Button();
-            this.labelDivisibleTerm = new System.Windows.Forms.Label();
-            this.cmBoxDivisibleTerm = new System.Windows.Forms.ComboBox();
-            this.txtDivisibleNumber = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.ChItalic = new System.Windows.Forms.CheckBox();
-            this.ChBold = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Günler = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Gun_Sayisi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gun_ismi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // labelFrom
-            // 
-            resources.ApplyResources(this.labelFrom, "labelFrom");
-            this.labelFrom.Name = "labelFrom";
-            // 
-            // labelTo
-            // 
-            resources.ApplyResources(this.labelTo, "labelTo");
-            this.labelTo.Name = "labelTo";
-            // 
-            // txtFrom
-            // 
-            resources.ApplyResources(this.txtFrom, "txtFrom");
-            this.txtFrom.Name = "txtFrom";
-            this.txtFrom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFrom_KeyPress);
-            // 
-            // txtTo
-            // 
-            resources.ApplyResources(this.txtTo, "txtTo");
-            this.txtTo.Name = "txtTo";
-            this.txtTo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTo_KeyPress);
-            // 
-            // buttonCount
-            // 
-            resources.ApplyResources(this.buttonCount, "buttonCount");
-            this.buttonCount.Name = "buttonCount";
-            this.buttonCount.UseVisualStyleBackColor = true;
-            this.buttonCount.Click += new System.EventHandler(this.buttonCount_Click);
-            // 
-            // buttonExit
-            // 
-            resources.ApplyResources(this.buttonExit, "buttonExit");
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.UseVisualStyleBackColor = true;
-            this.buttonExit.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // labelDivisibleTerm
-            // 
-            resources.ApplyResources(this.labelDivisibleTerm, "labelDivisibleTerm");
-            this.labelDivisibleTerm.Name = "labelDivisibleTerm";
-            this.labelDivisibleTerm.Click += new System.EventHandler(this.labelDivisibleTerm_Click);
-            // 
-            // cmBoxDivisibleTerm
-            // 
-            this.cmBoxDivisibleTerm.FormattingEnabled = true;
-            resources.ApplyResources(this.cmBoxDivisibleTerm, "cmBoxDivisibleTerm");
-            this.cmBoxDivisibleTerm.Name = "cmBoxDivisibleTerm";
-            this.cmBoxDivisibleTerm.SelectedIndexChanged += new System.EventHandler(this.cmBoxDivisibleTerm_SelectedIndexChanged);
-            // 
-            // txtDivisibleNumber
-            // 
-            resources.ApplyResources(this.txtDivisibleNumber, "txtDivisibleNumber");
-            this.txtDivisibleNumber.Name = "txtDivisibleNumber";
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // groupBox1
+            // button1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.groupBox1.Controls.Add(this.radioButton4);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.TabStop = false;
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // radioButton1
+            // dataGridView1
             // 
-            resources.ApplyResources(this.radioButton1, "radioButton1");
-            this.radioButton1.Checked = true;
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.TabStop = true;
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Günler});
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
             // 
-            // radioButton2
+            // Günler
             // 
-            resources.ApplyResources(this.radioButton2, "radioButton2");
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            resources.ApplyResources(this.Günler, "Günler");
+            this.Günler.Name = "Günler";
             // 
-            // radioButton3
+            // button2
             // 
-            resources.ApplyResources(this.radioButton3, "radioButton3");
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // radioButton4
+            // dataGridView2
             // 
-            resources.ApplyResources(this.radioButton4, "radioButton4");
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Gun_Sayisi,
+            this.Gun_ismi});
+            resources.ApplyResources(this.dataGridView2, "dataGridView2");
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 24;
             // 
-            // ChItalic
+            // Gun_Sayisi
             // 
-            resources.ApplyResources(this.ChItalic, "ChItalic");
-            this.ChItalic.Name = "ChItalic";
-            this.ChItalic.UseVisualStyleBackColor = true;
-            this.ChItalic.CheckedChanged += new System.EventHandler(this.ChItalic_CheckedChanged);
+            resources.ApplyResources(this.Gun_Sayisi, "Gun_Sayisi");
+            this.Gun_Sayisi.Name = "Gun_Sayisi";
             // 
-            // ChBold
+            // Gun_ismi
             // 
-            resources.ApplyResources(this.ChBold, "ChBold");
-            this.ChBold.Name = "ChBold";
-            this.ChBold.UseVisualStyleBackColor = true;
-            this.ChBold.CheckedChanged += new System.EventHandler(this.ChBold_CheckedChanged);
+            resources.ApplyResources(this.Gun_ismi, "Gun_ismi");
+            this.Gun_ismi.Name = "Gun_ismi";
             // 
             // mainform
             // 
             resources.ApplyResources(this, "$this");
-            this.Controls.Add(this.ChBold);
-            this.Controls.Add(this.ChItalic);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.txtDivisibleNumber);
-            this.Controls.Add(this.cmBoxDivisibleTerm);
-            this.Controls.Add(this.labelDivisibleTerm);
-            this.Controls.Add(this.buttonExit);
-            this.Controls.Add(this.buttonCount);
-            this.Controls.Add(this.txtTo);
-            this.Controls.Add(this.txtFrom);
-            this.Controls.Add(this.labelTo);
-            this.Controls.Add(this.labelFrom);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button1);
             this.Name = "mainform";
-            this.Load += new System.EventHandler(this.mainform_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label labelFrom;
-        private System.Windows.Forms.Label labelTo;
-        private System.Windows.Forms.TextBox txtFrom;
-        private System.Windows.Forms.TextBox txtTo;
-        private System.Windows.Forms.Button buttonCount;
-        private System.Windows.Forms.Button buttonExit;
-        private System.Windows.Forms.Label labelDivisibleTerm;
-        private System.Windows.Forms.ComboBox cmBoxDivisibleTerm;
-        private System.Windows.Forms.TextBox txtDivisibleNumber;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.CheckBox ChBold;
-        private System.Windows.Forms.CheckBox ChItalic;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Günler;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gun_Sayisi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gun_ismi;
+        private System.Windows.Forms.Button button2;
     }
 }
 

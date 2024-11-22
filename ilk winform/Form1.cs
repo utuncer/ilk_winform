@@ -20,38 +20,15 @@ namespace ilk_winform
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string[] gunler = new string[]
-                {"Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar"};
             dataGridView1.Rows.Clear();
-            for (int i = 0; i < gunler.Length; i++)
+            for (int i = 0; i < 10; i++)
             {
-                string satirGunler = gunler[i];
-                dataGridView1.Rows.Add(satirGunler);
-            }
-        }
+                int sayininKaresi = i * i;
+                int sayininKupu = i * i * i;
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            string[,] gunler = new string[,]
-            {
-                {"1","Pazartesi" },
-                {"2","Salı" },
-                {"3","Çarşamba" },
-                {"4","Perşembe" },
-                {"5","Cuma" },
-                {"6","Cumartesi" },
-                {"7","Pazar" }
-            };
-            dataGridView2.Rows.Clear();
-            for (int i = 0; i < gunler.GetLength(0); i++)
-            {
-                string[] gunSayisi = new string[gunler.GetLength(1)];
-                for (int j = 0; j < gunler.GetLength(1); j++)
-                {
-                    gunSayisi[j] = gunler[i,j];
-                }
-                dataGridView2.Rows.Add(gunSayisi);
+                dataGridView1.Rows.Add(i.ToString(),sayininKaresi.ToString(),sayininKupu.ToString());
             }
+
         }
     }
 }

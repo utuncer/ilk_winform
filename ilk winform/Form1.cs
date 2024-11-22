@@ -17,76 +17,32 @@ namespace ilk_winform
         {
             InitializeComponent();
         }
-        //değer döndürmeyen metod
-        public void rdGizle()
+        Employee personelDetail = new Employee();
+
+        private void btnSet_Click(object sender, EventArgs e)
         {
-            if (groupBox1.Visible == true)
-            {
-                btnGizle.Text = "Butonları Gör";
-                groupBox1.Visible = false;
-            }
-            else
-            {
-                btnGizle.Text = "Butonları Gizle";
-                groupBox1.Visible = true;
-            }
-        }
-        //değer döndüren metod
-        public string yaziTasi()
-        {
-            string yazi = textBox1.Text;
-            textBox1.Clear();
-            return yazi;
-        }
-        //değer döndürmeyen metod
-        public void yaziTemizle()
-        {
-            textBox1.Clear();
-            textBox2.Clear();
-        }
-        //public kullanılmadığında varsayılan private'tir
-        string labelaYaz()
-        {
-            string metin = textBox1.Text;
-            return metin;
-        }
-        public void metniKopyala(string metin)
-        {
-            textBox1.Text = metin;
-        }
-        public int topla(int sayi1, int sayi2)
-        {
-            int toplam = sayi1 + sayi2;
-            return toplam;
-        }
-        private void btnGizle_Click(object sender, EventArgs e)
-        {
-            rdGizle();
+            personelDetail.Name = txtName.Text;
+            personelDetail.Age = Convert.ToInt32(txtAge.Text);
+            personelDetail.EmployeeID = Convert.ToInt32(txtId.Text);
+            MessageBox.Show("All Data Received");
         }
 
-        private void btnTemizle_Click(object sender, EventArgs e)
+        private void btnGet_Click(object sender, EventArgs e)
         {
-            yaziTemizle();
+            txtAge.Clear();
+            txtId.Clear();
+            txtName.Clear();
+            MessageBox.Show(personelDetail.EmployeeID + " " + personelDetail.Name + " " + personelDetail.Age);
         }
 
-        private void btnYaziTasi_Click(object sender, EventArgs e)
+        private void btnSend_Click(object sender, EventArgs e)
         {
-            textBox2.Text = yaziTasi();
-        }
-
-        private void btnLabelYaz_Click(object sender, EventArgs e)
-        {
-            label1.Text = labelaYaz();
-        }
-
-        private void btnMetniDegistir_Click(object sender, EventArgs e)
-        {
-            metniKopyala(textBox2.Text);
-        }
-
-        private void btnTopla_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(topla(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text)).ToString());
+            personelDetail.Name = txtName.Text;
+            personelDetail.Age = Convert.ToInt32(txtAge.Text);
+            personelDetail.EmployeeID = Convert.ToInt32(txtId.Text);
+            Form2 form2 = new Form2();
+            form2.personelDetail = personelDetail;
+            form2.ShowDialog();
         }
     }
 }

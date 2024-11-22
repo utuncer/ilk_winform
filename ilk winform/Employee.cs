@@ -9,8 +9,8 @@ namespace ilk_winform
     public class Employee
     {
         //prop
-        public int EmployeeID { get; set; }
+        public int EmployeeId { get; set; }
         public string Name { get; set; }
-        public int Age { get; set; }
+        public string Surname { get; set; }
     }
 }

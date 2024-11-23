@@ -14,35 +14,55 @@ namespace ilk_winform
 {
     public partial class mainform : Form
     {
+        // Timer Class
+        // Interval -> milisaniye'yi ifade eder 5 saniye = 5000 milisaniye
         public mainform()
         {
             InitializeComponent();
         }
+        int counter = 60;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            //MessageBox.Show("Timer Aktive");
+            progressBar1.Value = counter;
+            if(counter == 0)
+            {
+                timer1.Stop();
+                MessageBox.Show("Timer was stopped");
+            }
+            else
+            {
+                counter--;
+            }
+            label1.Text = counter.ToString();
+            if(counter % 2 == 0)
+            {
+                button1.BackColor = Color.White;
+            }
+            else
+            {
+                button1.BackColor = Color.Red;
+            }
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+        }
+
+        private void mainform_Load(object sender, EventArgs e)
+        {
+            label1.Text = 60.ToString();
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Random rnd = new Random();
-            byte[] Array = new byte[7];
-            rnd.NextBytes(Array);
-            label1.Text = Array[0].ToString();
-            label2.Text = Array[1].ToString();
-            label3.Text = Array[2].ToString();
-            label4.Text = Array[3].ToString();
-            label5.Text = Array[4].ToString();
-            label6.Text = Array[5].ToString();
-            label7.Text = Array[6].ToString();
-        }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            string allValid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;':,.<>?/";
-            string result = " ";
-            Random rnd2 = new Random();
-            for (int i = 0; i < 6; i++)
-            {
-                result += allValid[rnd2.Next(0, Convert.ToInt32(allValid.Length))];
-            }
-            label1.Text = result;
         }
     }
 }

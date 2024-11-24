@@ -20,16 +20,14 @@ namespace ilk_winform
             InitializeComponent();
         }
 
-        private void btn1_Click(object sender, EventArgs e)
+        private void mainform_Load(object sender, EventArgs e)
         {
-            Personel personel = new Personel();
-            personel.personelID = txtID.Text;
-            personel.ad = txtAd.Text;
-            personel.pozisyon = txtPozisyon.Text;
-            personel.yas = txtYas.Text;
-            Form2 form2 = new Form2();
-            form2.personel = personel;
-            form2.ShowDialog();
+            Ogrenci.Numara = 0;
+
+            Ogrenci ogrenci = new Ogrenci();
+            ogrenci.Not1();
+
+            Ogrenci.Not2();
         }
     }
 }

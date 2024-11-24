@@ -20,14 +20,18 @@ namespace ilk_winform
             InitializeComponent();
         }
 
-        private void mainform_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Ogrenci.Numara = 0;
-
-            Ogrenci ogrenci = new Ogrenci();
-            ogrenci.Not1();
-
-            Ogrenci.Not2();
+            Teacher teacher = new Teacher();
+            teacher.SetValues2();
+            teacher.SetValues1();
+            textBox1.Clear();
+            textBox1.Text += teacher.ID + Environment.NewLine;
+            textBox1.Text += teacher.Name + Environment.NewLine;
+            textBox1.Text += teacher.Surname + Environment.NewLine;
+            textBox1.Text += teacher.Position + Environment.NewLine;
+            textBox1.Text += teacher.Salary + Environment.NewLine;
+            textBox1.Text += teacher.Branch + Environment.NewLine;
         }
     }
 }

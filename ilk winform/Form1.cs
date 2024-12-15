@@ -19,29 +19,13 @@ namespace ilk_winform
             InitializeComponent();
         }
         #region
-        public partial class Employee
+        sealed class Employee2
         {
-            public int EmployeeID { get; set; }
-            public string Name { get; set; }
-            public int Salary { get; set; }
+            
         }
-        partial class Employee
-
+        class Employee3 : Employee2
         {
-            public void SetValues()
-            {
-                Name = "Charles";
-                EmployeeID = 1;
-                Salary = 5000;
-            }
-        }
-        
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Employee emp = new Employee();
-            emp.SetValues();
-            textBox1.Text = emp.EmployeeID.ToString() + " " + emp.Name + " " + emp.Salary;
         }
         #endregion
     }

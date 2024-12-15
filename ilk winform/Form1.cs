@@ -20,47 +20,36 @@ namespace ilk_winform
             InitializeComponent();
         }
 
-        interface Computer
+        private void btnShow_Click(object sender, EventArgs e)
         {
-            void GetDesktops();
-            void GetLaptops();
+            Teacher tt = new Teacher();
+            tt.SetValues(1);
+            textBox1.Text = tt.ID.ToString();
         }
-        class Dell : Computer, Dellinterface
+
+        private void button1_Click(object sender, EventArgs e)
         {
-            public string Name { get; set; }
-            public int Price { get; set; }
-
-            public void GetDellLaptops()
-            {
-                Name = "Dell Laptop";
-                Price = 1500;
-            }
-
-            public void GetDesktops()
-            {
-                Name = "Desktops";
-                Price = 1000;
-            }
-
-            public void GetLaptops()
-            {
-                Name = "Laptop";
-                Price = 800;
-            }
+            // 2 Parametre
+            Teacher tt = new Teacher();
+            tt.SetValues(1, "Charles");
+            textBox1.Text = tt.ID.ToString() + " " + tt.Name;
         }
-        interface Dellinterface
+
+        private void button2_Click(object sender, EventArgs e)
         {
-            void GetDellLaptops();
+            // 3 Parametre
+            Teacher tt = new Teacher();
+            tt.SetValues(1, "Charles",1000);
+            textBox1.Text = tt.ID.ToString() + " " + tt.Name + " " + tt.Salary.ToString();
         }
-        private void mainform_Load(object sender, EventArgs e)
+
+        private void button3_Click(object sender, EventArgs e)
         {
-            Dell dell = new Dell();
-            dell.GetDesktops();
-            textBox1.Text += dell.Name + " " + dell.Price + Environment.NewLine;
-            dell.GetLaptops();
-            textBox1.Text += dell.Name + " " + dell.Price + Environment.NewLine; 
-            dell.GetDellLaptops();
-            textBox1.Text += dell.Name + " " + dell.Price + Environment.NewLine;
+            // 4 Parametre
+            Teacher tt = new Teacher();
+            tt.SetValues(1, "Charles",1000, true);
+            textBox1.Text = tt.ID.ToString() + " " + tt.Name + " " + tt.Salary.ToString() + " " + tt.control.ToString();
+
         }
     }
 }

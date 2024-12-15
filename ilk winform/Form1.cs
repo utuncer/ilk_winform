@@ -20,18 +20,47 @@ namespace ilk_winform
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        interface Computer
         {
-            Teacher teacher = new Teacher();
-            teacher.SetValues2();
-            teacher.SetValues1();
-            textBox1.Clear();
-            textBox1.Text += teacher.ID + Environment.NewLine;
-            textBox1.Text += teacher.Name + Environment.NewLine;
-            textBox1.Text += teacher.Surname + Environment.NewLine;
-            textBox1.Text += teacher.Position + Environment.NewLine;
-            textBox1.Text += teacher.Salary + Environment.NewLine;
-            textBox1.Text += teacher.Branch + Environment.NewLine;
+            void GetDesktops();
+            void GetLaptops();
+        }
+        class Dell : Computer, Dellinterface
+        {
+            public string Name { get; set; }
+            public int Price { get; set; }
+
+            public void GetDellLaptops()
+            {
+                Name = "Dell Laptop";
+                Price = 1500;
+            }
+
+            public void GetDesktops()
+            {
+                Name = "Desktops";
+                Price = 1000;
+            }
+
+            public void GetLaptops()
+            {
+                Name = "Laptop";
+                Price = 800;
+            }
+        }
+        interface Dellinterface
+        {
+            void GetDellLaptops();
+        }
+        private void mainform_Load(object sender, EventArgs e)
+        {
+            Dell dell = new Dell();
+            dell.GetDesktops();
+            textBox1.Text += dell.Name + " " + dell.Price + Environment.NewLine;
+            dell.GetLaptops();
+            textBox1.Text += dell.Name + " " + dell.Price + Environment.NewLine; 
+            dell.GetDellLaptops();
+            textBox1.Text += dell.Name + " " + dell.Price + Environment.NewLine;
         }
     }
 }

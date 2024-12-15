@@ -20,36 +20,18 @@ namespace ilk_winform
             InitializeComponent();
         }
 
-        private void btnShow_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            Teacher tt = new Teacher();
-            tt.SetValues(1);
-            textBox1.Text = tt.ID.ToString();
+            // Virtual
+            Employee employee = new Employee();
+            textBox1.Text = employee.SetValues(1, "Charles", 2000);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-            // 2 Parametre
-            Teacher tt = new Teacher();
-            tt.SetValues(1, "Charles");
-            textBox1.Text = tt.ID.ToString() + " " + tt.Name;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            // 3 Parametre
-            Teacher tt = new Teacher();
-            tt.SetValues(1, "Charles",1000);
-            textBox1.Text = tt.ID.ToString() + " " + tt.Name + " " + tt.Salary.ToString();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            // 4 Parametre
-            Teacher tt = new Teacher();
-            tt.SetValues(1, "Charles",1000, true);
-            textBox1.Text = tt.ID.ToString() + " " + tt.Name + " " + tt.Salary.ToString() + " " + tt.control.ToString();
-
+            // Override
+            Teacher employee = new Teacher();
+            textBox1.Text = employee.SetValues(1, "Charles", 2000);
         }
     }
 }

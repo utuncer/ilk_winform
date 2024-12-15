@@ -8,27 +8,14 @@ namespace ilk_winform
 {
     public class Teacher : Employee
     {
-        public void SetValues(int EmployeeID)
-        {
-            ID = EmployeeID;
-        }
-        public void SetValues(int EmployeeID, string name)
-        {
-            ID = EmployeeID;
-            Name = name;
-        }
-        public void SetValues(int EmployeeID, string name, int salary)
+        public override string SetValues(int EmployeeID, string name, int salary)
         {
             ID = EmployeeID;
             Name = name;
             Salary = salary;
-        } 
-        public void SetValues(int EmployeeID, string name, int salary, bool controll)
-        {
-            ID = EmployeeID;
-            Name = name;
-            Salary = salary;
-            control = controll;
+            control = true;
+            string text = ID.ToString() + " " + Name + " " + Salary.ToString() + " " + control.ToString();
+            return text;
         }
     }
 }

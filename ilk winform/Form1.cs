@@ -18,42 +18,31 @@ namespace ilk_winform
         {
             InitializeComponent();
         }
-        abstract class Vehicle
+        #region
+        public partial class Employee
         {
-            public abstract double GetFuel();
+            public int EmployeeID { get; set; }
+            public string Name { get; set; }
+            public int Salary { get; set; }
         }
-        class Bus : Vehicle
+        partial class Employee
+
         {
-            public override double GetFuel()
+            public void SetValues()
             {
-                return 3000;
+                Name = "Charles";
+                EmployeeID = 1;
+                Salary = 5000;
             }
         }
+        
 
-        class Truck : Vehicle
+        private void button1_Click(object sender, EventArgs e)
         {
-            public override double GetFuel()
-            {
-                return 5000;
-            }
+            Employee emp = new Employee();
+            emp.SetValues();
+            textBox1.Text = emp.EmployeeID.ToString() + " " + emp.Name + " " + emp.Salary;
         }
-
-
-        private void mainform_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnShow_Click(object sender, EventArgs e)
-        {
-            string textValue;
-            Vehicle vh = new Bus();
-            double temp = vh.GetFuel();
-            textValue = temp.ToString() + Environment.NewLine;
-            vh = new Truck();
-            double temp2 = vh.GetFuel();
-            textValue += temp2.ToString();
-            textBox1.Text = textValue;
-        }
+        #endregion
     }
 }

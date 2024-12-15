@@ -14,24 +14,46 @@ namespace ilk_winform
 {
     public partial class mainform : Form
     {
-        // 
         public mainform()
         {
             InitializeComponent();
         }
-
-        private void button4_Click(object sender, EventArgs e)
+        abstract class Vehicle
         {
-            // Virtual
-            Employee employee = new Employee();
-            textBox1.Text = employee.SetValues(1, "Charles", 2000);
+            public abstract double GetFuel();
+        }
+        class Bus : Vehicle
+        {
+            public override double GetFuel()
+            {
+                return 3000;
+            }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        class Truck : Vehicle
         {
-            // Override
-            Teacher employee = new Teacher();
-            textBox1.Text = employee.SetValues(1, "Charles", 2000);
+            public override double GetFuel()
+            {
+                return 5000;
+            }
+        }
+
+
+        private void mainform_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+            string textValue;
+            Vehicle vh = new Bus();
+            double temp = vh.GetFuel();
+            textValue = temp.ToString() + Environment.NewLine;
+            vh = new Truck();
+            double temp2 = vh.GetFuel();
+            textValue += temp2.ToString();
+            textBox1.Text = textValue;
         }
     }
 }

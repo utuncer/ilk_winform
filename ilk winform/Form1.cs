@@ -16,40 +16,34 @@ namespace ilk_winform
     public partial class mainform : Form
     {
         /*
-        Delegates
-        Fonksiyonun kendisini parametre olarak kullanmak istersek
-        function -> Delegate -> Event
-        Metotları referansları tutarak çalıştırır
-        Bir delegate birden fazla function (metod) işaret edebilir
+        Exception Handling (Hata Yakalama)
+        Program Sonlanmadan Hatayı Yakalamak İçin Kullanırız
+        Try/Cath/Finally/Throw
+        Hataların Tanımlanması -> https://prnt.sc/0t4enAxuzWfM
         */
         public mainform()
         {
             InitializeComponent();
         }
+
         #region
-        string exam;
-        public delegate void FillNote(int x);
-        public void FillMathNote(int mathNote)
-        {
-            exam += "Your Math Note is " + mathNote.ToString();
-        }
-        public void FillChemistryNote(int chemistry)
-        {
-            exam += "Your Math Note is " + chemistry.ToString();
-        }
-        public void settextbox (string text)
-        {
-            textBox1.Text = text;
-        }
         private void button1_Click(object sender, EventArgs e)
         {
-            FillNote note = FillMathNote; // Delegate ile metodu (function) bağladık
-            note += FillChemistryNote; // Delegate'e bir metod daha bağladık
-            note(80);
-            settextbox(exam);
-            note -= FillMathNote; // Delegate'den metod çıkardık
-            note(60);
-            settextbox(exam);
+            try
+            {
+                int firstNumber = Convert.ToInt32(textBox1.Text);
+                int secondNumber = Convert.ToInt32(textBox2.Text);
+                int result = firstNumber / secondNumber;
+            }
+            catch (DivideByZeroException ex)
+            {
+                throw new Exception("You cannot divide any number to zero"); // Visual studio içerisinde hata tanımlamaya yarar -> https://hizliresim.com/edcjdkm
+                //MessageBox.Show(ex.ToString());
+            }
+            finally //Hata yakalansa da yakalanmasa da çalışır.
+            {
+                MessageBox.Show("Program Finished");
+            }
         }
         #endregion
 
